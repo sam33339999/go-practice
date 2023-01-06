@@ -31,9 +31,36 @@ func (myJson *MyJson) GetType() string {
 
 func main() {
 
-	var jsonSingleBlob = []byte(`{"to": "U1234", "messages": [{"type": "text", "text": "Hello world"}]}`)
-	var jsonMultiBlob = []byte(`{"to": ["U1234", "U4567"], "messages": [{"type": "text", "text": "Hello world"}]}`)
-	var jsonReplyBlob = []byte(`{"replyToken": "12345", "messages": [{"type": "text", "text": "Hello world"}]}`)
+	var jsonSingleBlob = []byte(`
+	{
+		"to": "U1234",
+		"messages": [
+			{
+				"type": "text",
+				"text": "Hello world"
+			}
+		]
+	}`)
+	var jsonMultiBlob = []byte(`
+	{
+		"to": ["U1234", "U4567"],
+		"messages": [
+			{
+				"type": "text",
+				"text": "Hello world"
+			}
+		]
+	}`)
+	var jsonReplyBlob = []byte(`
+	{
+		"replyToken": "12345",
+		"messages": [
+			{
+				"type": "text",
+				"text": "Hello world"
+			}
+		]
+	}`)
 
 	var M1 MyJson
 	var M2 MyJson
